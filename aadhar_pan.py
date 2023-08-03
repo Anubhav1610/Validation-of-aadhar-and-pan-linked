@@ -8,7 +8,7 @@ from selenium.webdriver.chrome.options import Options
 import pandas as pd
 
 def check_adhar_pan(aadhar, pan):
-    service = Service(executable_path='C:\\Users\\ASUS\\Downloads\\chromedriver\\chromedriver.exe')
+    service = Service(executable_path='chromedriver.exe')
     options = Options()
     options.add_argument('--disable-logging')
     options.add_argument("start-maximized")
@@ -40,6 +40,7 @@ def check_adhar_pan(aadhar, pan):
         span_element = linkAadhaarFailure_desc.find_element(By.XPATH, '//*[@id="linkAadhaarFailure_desc"]/div/span')
 
         print(span_element.get_attribute('innerHTML'))
+        return span_element.get_attribute('innerHTML')
 
     finally:
         driver.quit()
