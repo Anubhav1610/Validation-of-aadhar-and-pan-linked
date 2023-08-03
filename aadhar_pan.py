@@ -45,5 +45,5 @@ def check_adhar_pan(aadhar, pan):
     finally:
         driver.quit()
 
-check_adhar_pan('367670981561', 'CRRPG9924O')
+check_adhar_pan('aadhar_number', 'pan_number')
 
